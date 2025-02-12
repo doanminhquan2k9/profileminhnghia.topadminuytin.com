@@ -1027,14 +1027,14 @@ THONG TIN THANH TOAN
 <!-- Bắt đầu phần hiển thị -->
 
 <body class='Border'>
-    <div class='LoaderCover'></div>
-        <div class='Loader'></div>
+    <div class='LoaderCover'>
+        <div class='Loader'>
             <div class='lds-ripple'>
                 <div></div>
                 <div></div>
             </div>
             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <h2 class='NameFtThanhDieu'>&#9787;Loading..1</h2>
+            <h2 class='NameFtThanhDieu'>&#9787;Loading...</h2>
         </div>
     </div>
     <!-- ===== Navigation Bar ===== -->
@@ -1047,7 +1047,7 @@ THONG TIN THANH TOAN
         </div>
         <br/>
         <p align='center'>
-            <img alt='minhnghia' class='Blob' src='https://i.imgur.com/8SCXIbW.jpeg' />
+            <img alt='minhnghia' class='Blob' src='https://i.imgur.com/EZ7Ava6.png' />
         </p>
         <h2 class='NameFtThanhDieu' id='userName'>Nguyễn Minh Nghĩa Media
             <div class='icon-container'>
@@ -1147,7 +1147,7 @@ THONG TIN THANH TOAN
                 </a><br/>
                 <a id='Instagram'>
                     <div class='Instagram'>
-                        <i class='bi bi-Instagram'>
+                        <i class='bi bi-instagram'>
 </i>Zalo
                     </div>
                 </a><br/>
@@ -1204,36 +1204,32 @@ THONG TIN THANH TOAN
         <article>
             <p class='BoxAboutMe' id='ThanhDieuAbout_1'>Hỗ Trợ Dịch Vụ MXH 😏</p><br/>
             <p class='BoxAboutMe' id='ThanhDieuAbout_2'>
-                STK: MB BANK: <span id="stkNumber" style="cursor: pointer; color: red; font-weight: bold;">77788899912345</span> CTK: NGUYEN MINH NGHIA
-                <a href='https://www.facebook.com/share/12CuMLYNcks/?mibextid=wwXIfr'>Chia sẻ</a>
+                STK: MB BANK: <span id="accountNumber" style="cursor: pointer; color: #6272ff;">77788899912345</span> 
+                CTK: NGUYEN MINH NGHIA
+                <a href='https://topadminuytin.com' style='color: #6272ff;'>click here</a>
             </p>
         </article>
     </div>
     
     <script>
-        // Lấy phần tử có id "stkNumber"
-        var stkElement = document.getElementById("stkNumber");
+        // Select the account number element
+        const accountNumberElement = document.getElementById('accountNumber');
     
-        // Thêm sự kiện click
-        stkElement.addEventListener("click", function() {
-            // Tạo một thẻ input ẩn để sao chép
-            var tempInput = document.createElement("input");
+        // Add event listener for click event
+        accountNumberElement.addEventListener('click', function() {
+            // Create a temporary input element to use for copying
+            const tempInput = document.createElement('input');
+            tempInput.value = accountNumberElement.textContent; // Set the value to the account number
             document.body.appendChild(tempInput);
-            tempInput.value = stkElement.textContent; // Gán số tài khoản vào input
+            tempInput.select(); // Select the text
+            document.execCommand('copy'); // Copy the selected text
+            document.body.removeChild(tempInput); // Remove the temporary input
     
-            // Chọn và sao chép nội dung của input
-            tempInput.select();
-            document.execCommand("copy");
-    
-            // Xóa input ẩn sau khi sao chép
-            document.body.removeChild(tempInput);
-    
-            // Thông báo đã sao chép thành công
-            alert("Đã sao chép số tài khoản!");
+            // Optionally, show an alert or change style to notify the user
+            alert('Số tài khoản đã được sao chép!');
         });
     </script>
     
-    </div>
     <br/><br/>
     <hr class='New' />
     <footer class='Cuoi Trang'>
@@ -1264,7 +1260,7 @@ THONG TIN THANH TOAN
             ShowToast();
             __GetIP();
             __GetInfo();
-            console.log("%c🌳 Name: Nguyễn Minh Nghĩa | Bio: From minhnghia with Love | Url:https://www.facebook.com/share/12CuMLYNcks/?mibextid=wwXIfrnt(270deg, #18d7d3, #68b7dd, #8695e6, #986fee); padding: 8px 15px; border-radius: 8px");
+            console.log("%c🌳 Name: Nguyễn Minh Nghĩa | Bio: From minhnghia with Love | Url: https://www.facebook.com/share/12CuMLYNcks/?mibextid=wwXIfr/ 🌳", "font-family: ;color:#fff; background: linear-gradient(270deg, #18d7d3, #68b7dd, #8695e6, #986fee); padding: 8px 15px; border-radius: 8px");
             console.log(`
              _       _                                                    _              
   __ _  __ _(_)   __| | ___ _ __   __   _____     ___ _   _ _ __   __ _  | |_ __ _ _ __  
@@ -1298,7 +1294,7 @@ THONG TIN THANH TOAN
         })
         // MUSIC PLAY
         const MusicList = [
-            "//files.catbox.moe/re3p92.mp3"
+            "//files.catbox.moe/re3p92.mp3",
             "//files.catbox.moe/kpwt51.mp3",
             "//files.catbox.moe/1obdsh.mp3",
             "//files.catbox.moe/4n3e44.mp3",
@@ -1341,7 +1337,7 @@ THONG TIN THANH TOAN
             }
             // SET URL FACEBOOK
             $('#Facebook').click(function() {
-                OpenUrl('https://www.facebook.com/share/12CuMLYNcks/?mibextid=wwXIfr');
+                OpenUrl('https://www.facebook.com/share/12CuMLYNcks/?mibextid=wwXIfr/');
             });
             // SET URL Youtube
             $('#Youtube').click(function() {
@@ -1351,7 +1347,7 @@ THONG TIN THANH TOAN
             $('#Tiktok').click(function() {
                 OpenUrl('https://www.tiktok.com/@hahaaa..209?_t=ZS-8tqbVY0S5Bp&_r=1');
             });
-            // SET URL Instagram
+            // SET URL INSTAGRAM
             $('#Instagram').click(function() {
                 OpenUrl('https://zalo.me/0981883847');
             });
